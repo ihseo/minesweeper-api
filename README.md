@@ -23,3 +23,7 @@ API를 통해 소통한다고 가정하고 만들어 보았습니다.
 * 좌클릭 to reveal cell<br>
 * 우클릭 to flag (깃발)
 * 좌우 한번에 클릭해서 모두 오픈
+
+## Future
+* API에는 반영되어 있지 않지만 클릭 수로 clicks 및 효율성을 return할 수 있습니다
+* Game 모델의 created_at과 updated_at 차이를 통해 쉽게 duration을 return할 수 있습니다
