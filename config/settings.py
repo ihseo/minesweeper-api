@@ -85,10 +85,10 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'minesweeper',
-        'USER': 'root',
-        'PASSWORD': 'vhzjtmaos1',
-        'HOST': 'localhost',
+        'NAME': 'django',
+        'USER': 'django',
+        'PASSWORD': 'django',
+        'HOST': 'db',
         'PORT': '3306',
         'OPTIONS': {
             'charset': 'utf8mb4'
