@@ -34,9 +34,22 @@ class NewGame(APIView):
                     }))
     def post(self, request):
         difficulty = request.data.get('difficulty')
-        width = request.data.get('width')
-        height = request.data.get('height')
-        mines = request.data.get('mines')
+        if difficulty == "easy":
+            height = 9
+            width = 9
+            mines = 10
+        elif difficulty == "medium":
+            height = 16
+            width = 16
+            mines = 40
+        elif difficulty == "hard":
+            height = 16
+            width = 30
+            mines = 99
+        else:
+            width = request.data.get('width')
+            height = request.data.get('height')
+            mines = request.data.get('mines')
         ms_map = create_map(difficulty, width=width, height=height, mines=mines)
         game = Game.objects.create(
             map=ms_map,
