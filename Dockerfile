@@ -6,6 +6,6 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 COPY . .
-RUN ["chmod", "+x", "/usr/src/app/docker-entrypoint.sh"]
+RUN chmod +x /app/docker-entrypoint.sh
 EXPOSE 8000
 CMD ["/app/docker-entrypoint.sh"]
