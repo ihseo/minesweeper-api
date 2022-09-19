@@ -40,6 +40,7 @@ INTERNAL_APPS = [
 INSTALLED_APPS = INTERNAL_APPS + EXTERNAL_APPS + DJANGO_APPS
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',  # CORS control
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -47,7 +48,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',  # CORS control
 ]
 
 ROOT_URLCONF = 'config.urls'
